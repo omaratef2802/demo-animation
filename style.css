@@ -1,0 +1,122 @@
+.material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+
+li {
+  list-style: none;
+  background-color: gray;
+  display: inline-block;
+  padding: 20px;
+  background-color: gray;
+  transition: background-color 0.5s linear;
+  margin-left: -4px;
+}
+a {
+  text-decoration: none;
+  padding: 10px;
+  /* color: #2e7643; */
+}
+li:hover {
+  background-color: green;
+}
+
+.home {
+  background-color: green;
+}
+
+.two {
+  width: 200px;
+  margin: auto;
+  /* border-bottom: 1.5px solid gray; */
+  border: 1.5px solid gray;
+}
+
+.img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.txt {
+  width: 70px;
+  display: inline;
+  text-align: center;
+  align-content: center;
+}
+
+.heart {
+  width: 200px;
+  height: 200px;
+  animation: hrt 0.5s linear infinite alternate;
+}
+@keyframes hrt {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes rotfan {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#myCanvas {
+  width: 800px;
+  height: 400px;
+  border: 1px solid #000000;
+  background-color: cornflowerblue;
+}
+
+.card {
+  width: 400px;
+  margin: 100px auto;
+}
+
+#Img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+#txt {
+  width: 200px;
+  height: 50px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 25px;
+  margin-left: -10px;
+  padding-left: 35px;
+  line-height: 50px;
+  overflow: hidden;
+  vertical-align: middle;
+  transition: 0.5s;
+  transform-origin: left;
+}
+
+#close {
+  float: right;
+  margin-right: 15px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.hide {
+  transition: transform 1s linear;
+  transform: translateX(-180px);
+  display: none;
+  opacity: 0;
+  z-index: -1;
+}

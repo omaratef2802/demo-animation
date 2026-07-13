@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+  </head>
+  <body>
+    <!--                             TASK 1 -->
+    <ol>
+      <li class="home">
+        <a href="" class="">
+          <span class="material-symbols-outlined"> home </span>
+        </a>
+      </li>
+      <li>
+        <a href="" class="">
+          <span class="material-symbols-outlined"> search </span>
+        </a>
+      </li>
+      <li>
+        <a href="" class="">
+          <span class="material-symbols-outlined"> mail </span>
+        </a>
+      </li>
+      <li>
+        <a href="" class="">
+          <span class="material-symbols-outlined"> public </span>
+        </a>
+      </li>
+      <li>
+        <a href="" class="">
+          <span class="material-symbols-outlined"> delete </span>
+        </a>
+      </li>
+    </ol>
+
+    <!--                             TASK 2 -->
+
+    <div class="card">
+      <img src="./cats.jpg" id="Img" />
+      <div id="txt">Omar Atef <span id="close">X</span></div>
+    </div>
+    <div class="fans">
+      <img src="./fan.png" alt="" id="fan" />
+      <button id="btn-on" onclick="StartSpeed()">on</button>
+      <button id="btn-1" onclick="Speed(2)">1</button>
+      <button id="btn-2" onclick="Speed(1)">2</button>
+      <button id="btn-3" onclick="Speed(0.5)">3</button>
+      <button id="btn-off" onclick="stopSpeed()">off</button>
+    </div>
+
+    <div>
+      <img src="./Picture1.png" class="heart" />
+    </div>
+    <div>
+      <svg
+        viewBox="0 0 200 200"
+        width="400"
+        height="400"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="100"
+          cy="100"
+          fill="yellow"
+          r="78"
+          stroke="black"
+          stroke-width="3"
+        />
+        <g class="eyes">
+          <circle cx="61" cy="82" r="12" id="left-eye" />
+          <circle cx="127" cy="82" r="12" id="right-eye" />
+        </g>
+        <path
+          d="m136.81 116.53c.69 26.17-64.11 42-81.52-.73"
+          style="fill: none; stroke: black; stroke-width: 3"
+          id="mouse"
+        />
+      </svg>
+      <div id="res"></div>
+    </div>
+    <script>
+      const Fan = document.getElementById("fan");
+
+      function stopSpeed() {
+        Fan.style.animation = "none";
+      }
+
+      function Speed(dur) {
+        Fan.style.animation = `rotfan ${dur}s linear infinite`;
+      }
+
+      function StartSpeed() {
+        Fan.style.animation = `rotfan 2s linear infinite`;
+      }
+
+      const leye = document.getElementById("left-eye");
+      const reye = document.getElementById("right-eye");
+      const mouse = document.getElementById("mouse");
+      const res = document.getElementById("res");
+
+      leye.addEventListener("mouseover", function () {
+        res.innerHTML = "this is left eye";
+      });
+      reye.addEventListener("mouseover", function () {
+        res.innerHTML = "this is right eye";
+      });
+      mouse.addEventListener("mouseover", function () {
+        res.innerHTML = "this is mouse";
+      });
+
+      let txt = document.getElementById("txt");
+      let delt = document.getElementById("close");
+      let img = document.getElementById("Img");
+
+      delt.addEventListener("click", function () {
+        txt.classList.add("hide");
+      });
+      img.addEventListener("click", function () {
+        txt.classList.remove("hide");
+      });
+    </script>
+  </body>
+</html>
